@@ -1,6 +1,16 @@
+kind: pipeline
+name: default
+
 pipeline:
   build:
     image: node:latest
     commands:
       - npm install
       - npm run build
+  docker:
+    image: plugins/docker
+    settings:
+      username: docker_username
+      password: docker_password
+      repo: docker.grug.dev/portfolio
+      tags: latest
