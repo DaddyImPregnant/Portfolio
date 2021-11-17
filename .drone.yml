@@ -28,7 +28,6 @@ steps:
     branch:
     - development
 
-
 - name: docker
   pull: if-not-exists
   image: plugins/docker
@@ -52,3 +51,8 @@ steps:
     webhook_token:
       from_secret: discord_webhook_token
     message: "{{#success build.status}} ✅  Build #{{build.number}} of `{{repo.name}}` succeeded.\n\n📝 Commit by {{commit.author}} on `{{commit.branch}}`:\n``` {{commit.message}} ```\n🌐 {{ build.link }}\n\n ✅ duration: {{duration build.started build.finished}} \n\n ✅ started: {{datetime build.started \"2006/01/02 15:04\" \"America/New_York\"}} \n\n ✅ finished: {{datetime build.finished \"2006/01/02 15:04\" \"America/New_York\"}} {{else}} ❌  Build #{{build.number}} of `{{repo.name}}` failed.\n\n📝 Commit by {{commit.author}} on `{{commit.branch}}`:\n``` {{commit.message}} ```\n🌐 {{ build.link }}\n\n ✅ duration: {{duration build.started build.finished}} \n\n ✅ started: {{datetime build.started \"2006/01/02 15:04\" \"America/New_York\"}} \n\n ✅ finished: {{datetime build.finished \"2006/01/02 15:04\" \"America/New_York\"}}{{/success}}\n"
+
+trigger:
+  event:
+    exclude:
+    - pull_request
