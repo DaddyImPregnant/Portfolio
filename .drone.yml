@@ -19,8 +19,10 @@ steps:
   pull: if-not-exists
   image: plugins/docker
   settings:
-    password: docker_password
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
     registry: docker.grug.dev
     repo: docker.grug.dev/portfolio
-    username: docker_username
     tags: latest
