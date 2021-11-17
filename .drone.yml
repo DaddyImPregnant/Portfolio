@@ -14,6 +14,9 @@ steps:
   commands:
   - npm install
   - npm run build
+  when:
+    branch:
+    - master
 
 - name: docker
   pull: if-not-exists
