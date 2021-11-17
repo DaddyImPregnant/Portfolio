@@ -30,8 +30,10 @@ steps:
     branch:
     - master
 
-- name: discord notification
-  image: appleboy/drone-discord
+- name:
+    from_secret: discord notification
+  image:
+    from_secret: appleboy/drone-discord
   settings:
     webhook_id: discord_webhook_id
     webhook_token: discord_webhook_token
