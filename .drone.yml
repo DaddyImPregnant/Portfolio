@@ -23,7 +23,7 @@ steps:
   image: node:latest
   commands:
   - npm install
-  - npm run test
+  - npm test a --watchAll=false
   when:
     branch:
     - development
