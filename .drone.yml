@@ -18,6 +18,17 @@ steps:
     branch:
     - master
 
+- name: test
+  pull: if-not-exists
+  image: node:latest
+  commands:
+  - npm install
+  - npm run test
+  when:
+    branch:
+    - development
+
+
 - name: docker
   pull: if-not-exists
   image: plugins/docker
