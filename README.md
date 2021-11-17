@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio [![Build Status](https://ci.grug.dev/api/badges/DaddyImPregnant/Portfolio/status.svg)](https://ci.grug.dev/DaddyImPregnant/Portfolio)
 
 A website and soon to be Portfolio for https://daddyimpregnant.com
 
