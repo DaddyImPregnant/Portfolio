@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import Particles from "react-tsparticles";
 
 function Background() {
@@ -12,7 +13,7 @@ function Background() {
   };
 
   return (
-	<Particles url="./assets/particles.json" />
+	    <Particles url='../assets/particles.json' />
     );
 }
 

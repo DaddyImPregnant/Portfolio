@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './pages/index.js';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import { extendTheme, theme } from "@chakra-ui/react"
+import { theme } from "@chakra-ui/react"
 import "@fontsource/abhaya-libre"
 
 ReactDOM.render(
