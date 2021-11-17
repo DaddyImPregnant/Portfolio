@@ -25,6 +25,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prod": "next export",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
