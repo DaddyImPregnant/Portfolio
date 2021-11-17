@@ -10,7 +10,7 @@ import "@fontsource/abhaya-libre"
 ReactDOM.render(
   <StrictMode>
     <ColorModeScript />
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <App />
     </ChakraProvider>
   </StrictMode>,
