@@ -31,6 +31,7 @@ function App() {
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={2}>
             <Heading>DaddyImPregnant</Heading>
+            <Text>Software Developer</Text>
             <Link href="https://github.com/DaddyImPregnant"><LogoGithubIcon /></Link>
           </VStack>
         </Grid>
