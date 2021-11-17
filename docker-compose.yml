@@ -5,4 +5,4 @@ services:
     image: docker.grug.dev/portfolio:latest
     container_name: portfolio
     ports:
-      - 8042:3000
+      - 8042:80
