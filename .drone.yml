@@ -11,7 +11,8 @@ pipeline:
   docker:
     image: plugins/docker
     settings:
+      repo: docker.grug.dev/portfolio
+      auto_tag: true
       username: docker_username
       password: docker_password
-      repo: docker.grug.dev/portfolio
       registry: docker.grug.dev
