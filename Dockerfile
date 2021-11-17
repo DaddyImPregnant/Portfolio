@@ -9,15 +9,11 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
-COPY package-lock.json ./
-
 COPY . ./
 
 RUN npm install --force
 RUN npm install react-scripts@3.4.1 -g --silent
 RUN npm run build
-
-# add app
 
 # start app
 CMD ["npm", "start"]
