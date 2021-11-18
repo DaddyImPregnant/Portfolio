@@ -6,21 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { theme } from "@chakra-ui/react"
 import "@fontsource/abhaya-libre"
-import Plausible from 'plausible-tracker'
-
-const { trackPageview } = Plausible({
-  // Track localhost by default
-  trackLocalhost: true,
-})
-
-trackPageview({
-  url: "https://daddyimpregnant.com",
-  apiHost: "https://analytics.grug.dev"
-})
-
-const { enableAutoPageviews } = Plausible()
-
-enableAutoPageviews()
 
 ReactDOM.render(
   <StrictMode>
