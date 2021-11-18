@@ -1,0 +1,8 @@
+services:
+  portfolio:
+    container_name: portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8042:80
