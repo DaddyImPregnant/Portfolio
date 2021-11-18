@@ -5,6 +5,6 @@ import App from '../pages/index.js';
 
 test('renders github link', () => {
   render(<App />);
-  const linkElement = screen.getAllByText(/DaddyImPregnant/i)[1];
+  const linkElement = screen.getAllByText(/DaddyImPregnant/i)[0];
   expect(linkElement).toBeInTheDocument();
 });
