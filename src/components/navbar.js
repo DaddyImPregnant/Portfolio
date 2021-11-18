@@ -30,10 +30,9 @@ const theme = extendTheme({
 function Navbar() {  
     return (
         <ChakraProvider theme={theme}>
-          <Box position="fixed" as="nav" w="100%" color="#E5E9F0" css={{ backdropFilter: 'blur(3px)' }} zIndex={1}>
+          <Box position="fixed" as="nav" w="100%" color="#E5E9F0" css={{ backdropFilter: 'blur(5px)' }} zIndex={1}>
 
           <HStack>
-            <Link href="/">DaddyImPregnant</Link>
             <Spacer />
             <ColorModeSwitcher/>
           </HStack>
