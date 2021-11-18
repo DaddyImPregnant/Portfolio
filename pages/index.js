@@ -17,7 +17,6 @@ import { LogoGithubIcon } from 'chakra-ui-ionicons';
 import Background from '../src/Background';
 import TypeWriter from '../src/Typewriter';
 import Head from 'next/head'
-import PlausibleProvider from 'next-plausible'
 
 
 const theme = extendTheme({
