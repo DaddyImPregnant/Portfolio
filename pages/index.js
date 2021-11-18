@@ -22,11 +22,12 @@ import {
 import "@fontsource/abhaya-libre"
 import { extendTheme } from "@chakra-ui/react"
 import { LogoGithubIcon } from 'chakra-ui-ionicons';
-import Background from '../src/Background';
-import TypeWriter from '../src/Typewriter';
+import Background from '../src/components/particle';
+import Blinker from '../src/components/blinker';
 import Head from 'next/head'
 import AnalyticsAlert from '../src/AnalyticsAlert';
 import Navbar from '../src/components/navbar';
+import Typist from 'react-typist';
 
 
 const theme = extendTheme({
@@ -53,7 +54,16 @@ function App() {
           <Spacer />
           <VStack spacing={2}>
             <Heading>DaddyImPregnant</Heading>
-            <TypeWriter />
+            <HStack spacing={0}>
+            <Typist cursor={{ show: false }}>
+              <span>Plugin Developer</span>
+              <Typist.Backspace count={16} delay={200} />
+              <span>Software Developer</span>
+              <Typist.Backspace count={20} delay={200} />
+              <span>System Administrator</span>
+              </Typist>
+              <Blinker />
+            </HStack>
             <Link href="https://github.com/DaddyImPregnant"><LogoGithubIcon /></Link>
           </VStack>
         </Grid>
