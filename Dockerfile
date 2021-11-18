@@ -6,8 +6,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 COPY . ./
 COPY package.json ./
 
-RUN npm ci --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm i --force
+RUN npm install react-scripts@3.4.1 -g
+RUN npm run build
 
 RUN npm run prod
 

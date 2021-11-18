@@ -12,7 +12,7 @@ steps:
   pull: if-not-exists
   image: node:latest
   commands:
-  - npm install
+  - npm install --force
   - npm run build
   when:
     branch:
@@ -22,7 +22,7 @@ steps:
   pull: if-not-exists
   image: node:latest
   commands:
-  - npm install
+  - npm install --force
   - npm test a --watchAll=false
   when:
     branch:
