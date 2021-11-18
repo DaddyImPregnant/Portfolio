@@ -8,6 +8,7 @@ COPY package.json ./
 
 RUN npm i --force
 RUN npm install react-scripts@3.4.1 -g
+RUN npm run build
 
 RUN npm run prod
 
