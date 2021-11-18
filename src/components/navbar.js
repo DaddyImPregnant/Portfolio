@@ -14,24 +14,32 @@ import {
   Text,
   useColorModeValue,
   HStack,
-  Spacer
+  Spacer,
+  ChakraProvider,
+  extendTheme
 } from '@chakra-ui/react'
 
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
+const theme = extendTheme({
+  fonts: {
+    heading: "Abhaya Libre",
+  },
+})
+
 function Navbar() {  
     return (
-      <Box position="fixed" as="nav" w="100%" color="#E5E9F0" css={{ backdropFilter: 'blur(3px)' }} zIndex={1}>
+        <ChakraProvider theme={theme}>
+          <Box position="fixed" as="nav" w="100%" color="#E5E9F0" css={{ backdropFilter: 'blur(3px)' }} zIndex={1}>
 
           <HStack>
-          <Text>DaddyImPregnant</Text>
-          <Spacer />
+            <Link href="/">DaddyImPregnant</Link>
+            <Spacer />
             <ColorModeSwitcher/>
           </HStack>
-
-          
-    
-    </Box>
+  
+        </Box>
+        </ChakraProvider>
     );
 }
 
