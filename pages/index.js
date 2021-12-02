@@ -61,6 +61,8 @@ function App() {
               <span>Software Developer</span>
               <Typist.Backspace count={20} delay={200} />
               <span>System Administrator</span>
+              <Typist.Backspace count={20} delay={200} />
+              <span>DaddyImPregnant#5192</span>
               </Typist>
               <Blinker />
             </HStack>
