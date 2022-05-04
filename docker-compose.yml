@@ -6,3 +6,6 @@ services:
     container_name: portfolio
     ports:
       - 8042:80
+    environment:
+      - NEXT_PUBLIC_USERNAME=Grug
+      - NEXT_PUBLIC_DISCORD=DaddyImPregnant#5192
