@@ -25,10 +25,8 @@ import { LogoGithubIcon } from 'chakra-ui-ionicons';
 import Background from '../src/components/particle';
 import Blinker from '../src/components/blinker';
 import Head from 'next/head'
-import AnalyticsAlert from '../src/AnalyticsAlert';
 import Navbar from '../src/components/navbar';
 import Typist from 'react-typist';
-
 
 const theme = extendTheme({
   fonts: {
@@ -37,15 +35,21 @@ const theme = extendTheme({
 })
 
 function App() {
+
+  const copy = async () => {
+    await navigator.clipboard.writeText(process.env.NEXT_PUBLIC_DISCORD);
+    alert('Discord copied');
+  }
+
   return (
     <ChakraProvider theme={theme}>
       
-
       <Head>
-        <title>Brian | DaddyImPregnant</title>
+        <title>{`Brian | ${process.env.NEXT_PUBLIC_USERNAME}`}</title>
       </Head>
 
       <Background />
+      
 
       <Navbar />
 
@@ -53,7 +57,7 @@ function App() {
         <Grid minH="100vh" gap={6}>
           <Spacer />
           <VStack spacing={2}>
-            <Heading>DaddyImPregnant</Heading>
+            <Heading>{`${process.env.NEXT_PUBLIC_USERNAME}`}</Heading>
             <HStack spacing={0}>
             <Typist cursor={{ show: false }}>
               <span>Plugin Developer</span>
@@ -62,7 +66,7 @@ function App() {
               <Typist.Backspace count={20} delay={200} />
               <span>System Administrator</span>
               <Typist.Backspace count={20} delay={200} />
-              <span>DaddyImPregnant#5192</span>
+              <span onClick={copy}>DaddyImPregnant#5192</span>
               </Typist>
               <Blinker />
             </HStack>

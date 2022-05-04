@@ -19,7 +19,7 @@ import {
   extendTheme
 } from '@chakra-ui/react'
 
-import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import { ColorModeSwitcher } from './ColorModeSwitcher.js';
 
 const theme = extendTheme({
   fonts: {
